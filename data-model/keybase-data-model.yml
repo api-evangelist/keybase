@@ -1,0 +1,47 @@
+generated: '2026-07-20'
+method: searched
+source: https://keybase.io/docs/api/1.0/call/user/lookup
+description: >-
+  Entity-relationship model derived from the Keybase API 1.0 user/lookup
+  response structure and documented endpoints. The central entity is the User,
+  keyed by username, with cryptographic keys and verifiable identity proofs.
+entities:
+- name: User
+  key: username
+  fields: [uid, username, ctime, mtime, id_version, track_version]
+  source_field_group: basics
+- name: Profile
+  belongs_to: User
+  fields: [full_name, location, bio]
+  source_field_group: profile
+- name: PublicKey
+  belongs_to: User
+  fields: [key_fingerprint, kid, key_type, bundle, key_bits, key_algo]
+  source_field_group: public_keys
+  endpoints: [key/fetch, "<user>/pgp_keys.asc", key/add]
+- name: IdentityProof
+  belongs_to: User
+  fields: [proof_type, nametag, state, proof_url, sig_id]
+  source_field_group: proofs_summary
+  proof_types: [twitter, github, reddit, hackernews, dns, generic_web_site]
+- name: CryptocurrencyAddress
+  belongs_to: User
+  fields: [address, type]
+  source_field_group: cryptocurrency_addresses
+  types: [bitcoin, zcash]
+- name: MerkleRoot
+  fields: [seqno, ctime, hash, root]
+  endpoints: [merkle/root, merkle/block]
+  note: Signed transparency log anchoring user sigchains.
+- name: Signature
+  belongs_to: User
+  fields: [seqno, sig_id, payload_hash, prev]
+  endpoints: [sig/next_seqno, sig/post, sig/post_auth]
+relationships:
+- {from: Profile, to: User, kind: belongs_to, via: username}
+- {from: PublicKey, to: User, kind: belongs_to, via: uid}
+- {from: IdentityProof, to: User, kind: belongs_to, via: uid}
+- {from: CryptocurrencyAddress, to: User, kind: belongs_to, via: uid}
+- {from: Signature, to: User, kind: belongs_to, via: uid}
+- {from: User, to: PublicKey, kind: has_many, via: uid}
+- {from: User, to: IdentityProof, kind: has_many, via: uid}

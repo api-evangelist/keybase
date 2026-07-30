@@ -1,0 +1,35 @@
+# Keybase
+
+> Keybase is an end-to-end encrypted messaging, file-sharing, and public-key
+> directory platform. It maps human-readable usernames to public keys and
+> cryptographically verifiable social-identity proofs, and exposes a public
+> read-oriented HTTP JSON API (v1.0) plus officially supported chat-bot SDKs.
+> Founded by Chris Coyne and Max Krohn; acquired by Zoom in 2020.
+
+## API
+
+- [Keybase API 1.0 reference](https://keybase.io/docs/api/1.0): Public JSON API. Base URL https://keybase.io/_/api/1.0. Endpoints: user/lookup, key/fetch, <user>/pgp_keys.asc, merkle/root, merkle/block, getsalt, login, signup, session/killall, sig/next_seqno, sig/post, sig/post_auth, key/add. Responses use a status {code,name} envelope; CORS enabled.
+
+## Specs & Artifacts
+
+- [Authentication](https://raw.githubusercontent.com/api-evangelist/keybase/refs/heads/main/authentication/keybase-authentication.yml): session-token + signature auth model.
+- [Conventions](https://raw.githubusercontent.com/api-evangelist/keybase/refs/heads/main/conventions/keybase-conventions.yml): request/response conventions and error envelope.
+- [Error catalog](https://raw.githubusercontent.com/api-evangelist/keybase/refs/heads/main/errors/keybase-problem-types.yml): status-code envelope.
+- [Data model](https://raw.githubusercontent.com/api-evangelist/keybase/refs/heads/main/data-model/keybase-data-model.yml): User / PublicKey / IdentityProof entity graph.
+- [Conformance](https://raw.githubusercontent.com/api-evangelist/keybase/refs/heads/main/conformance/keybase-conformance.yml): OpenPGP, saltpack, Merkle transparency.
+
+## SDKs & Tools
+
+- [keybase-bot (Node.js)](https://www.npmjs.com/package/keybase-bot): officially supported chat-bot SDK.
+- [pykeybasebot (Python)](https://pypi.org/project/pykeybasebot/): officially supported Python bot client.
+- [go-keybase-chat-bot (Go)](https://pkg.go.dev/github.com/keybase/go-keybase-chat-bot): official Go chat-bot SDK.
+- [keybase CLI](https://keybase.io/docs/command_line): the command-line client.
+
+## Docs
+
+- [Documentation](https://keybase.io/docs)
+- [Blog](https://keybase.io/blog)
+- [Security advisories](https://keybase.io/docs/secadv)
+- [Bug reporting](https://keybase.io/docs/bug_reporting)
+- [GitHub organization](https://github.com/keybase)
+- [Download](https://keybase.io/download)

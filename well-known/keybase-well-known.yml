@@ -1,0 +1,12 @@
+generated: '2026-07-20'
+method: searched
+host: https://keybase.io
+description: >-
+  Probe of the keybase.io /.well-known/ discovery surface. No discovery
+  documents are served (Keybase does not use OAuth/OIDC and publishes no
+  security.txt or api-catalog). Absence recorded as valid data.
+documents:
+- path: /.well-known/security.txt
+  status: 404
+- path: /.well-known/openid-configuration
+  status: 404

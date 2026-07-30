@@ -1,0 +1,41 @@
+generated: '2026-07-20'
+method: searched
+source: https://keybase.io/docs/command_line
+description: >-
+  The keybase command-line client — the primary interface to Keybase.
+  It ships as part of the desktop/server package and is the surface the
+  official chat-bot SDKs (packages/keybase-packages.yml) drive. Command groups
+  captured from the Keybase docs and the keybase/client repository.
+docs: https://keybase.io/docs/command_line
+repo: https://github.com/keybase/client
+install:
+  homebrew: brew install keybase
+  debian_ubuntu: 'curl --remote-name https://prerelease.keybase.io/keybase_amd64.deb && sudo apt install ./keybase_amd64.deb'
+  download: https://keybase.io/download
+commands:
+  identity_proofs:
+    - {name: id, description: Identity-prove a user; verify their cryptographic identity and social proofs.}
+    - {name: prove, description: Generate a proof that you own a remote account (twitter, github, reddit, hackernews, dns, web).}
+    - {name: pgp, description: Manage PGP keys — gen, select, pull, push, export, import, sign, verify, encrypt, decrypt.}
+    - {name: follow, description: Verify and track a user's identity over time.}
+  chat:
+    - {name: chat send, description: Send an end-to-end encrypted chat message to a user or team.}
+    - {name: chat read, description: Read messages in a conversation.}
+    - {name: chat list, description: List your conversations.}
+    - {name: chat api, description: JSON API over stdin/stdout for scripting chat (used by the bot SDKs).}
+    - {name: chat api-listen, description: Stream incoming chat messages as JSON for bots/automation.}
+  teams:
+    - {name: team create, description: Create a Keybase team.}
+    - {name: team add-member, description: Add a member to a team with a role.}
+    - {name: team list-memberships, description: List teams you belong to.}
+  fs_git:
+    - {name: fs, description: Interact with the Keybase encrypted filesystem (KBFS) — ls, cp, mv, read, write.}
+    - {name: git, description: Manage end-to-end encrypted Keybase git repositories.}
+  wallet:
+    - {name: wallet, description: Manage the Keybase Stellar wallet — send, balances, history, accounts.}
+  account_service:
+    - {name: login, description: Log in to Keybase on this device.}
+    - {name: logout, description: Log out of Keybase.}
+    - {name: signup, description: Create a new Keybase account.}
+    - {name: status, description: Show information about the current session and device.}
+    - {name: version, description: Print the keybase client version.}

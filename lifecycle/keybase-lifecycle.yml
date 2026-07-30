@@ -1,0 +1,24 @@
+generated: '2026-07-20'
+method: searched
+source: https://keybase.io/docs/api/1.0
+description: >-
+  Lifecycle and change posture for the Keybase API 1.0.
+versioning:
+  scheme: uri-path
+  current: '1.0'
+  docs: https://keybase.io/docs/api/1.0
+  stability: alpha
+  notes: >-
+    The API docs state the API is alpha and "subject to change without version
+    bumps." Keybase was acquired by Zoom in 2020; the platform and its public
+    API remain operational but are in maintenance.
+deprecation:
+  policy_url: null
+  sunset_header: false
+  notes: No formal deprecation policy or RFC 8594 Sunset/Deprecation header support is documented.
+sla:
+  url: null
+  uptime_target: null
+status_page: null
+security_advisories: https://keybase.io/docs/secadv
+deprecated_operations: []

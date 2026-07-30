@@ -1,0 +1,38 @@
+generated: '2026-07-20'
+method: searched
+source: https://keybase.io/docs/api/1.0
+docs: https://keybase.io/docs/api/1.0
+description: >-
+  Keybase API 1.0 uses a custom challenge/response authentication rather than
+  OAuth. Public read endpoints (user/lookup, key/fetch, merkle/root) require no
+  auth. Authenticated calls use a salt+password login handshake to obtain a
+  session token and CSRF token, and identity mutations are signed with the
+  user's private key and posted to the signature endpoints.
+summary:
+  types: [session-token, signature-based]
+  oauth2: false
+  public_read: true
+schemes:
+- name: session
+  type: apiKey
+  in: cookie
+  parameter: session
+  description: >-
+    Session token issued by the login flow (getsalt then login: HMAC of the
+    salted password). Carried as a cookie/session token; paired with a
+    csrf_token for state-changing requests.
+  source: https://keybase.io/docs/api/1.0/call/login
+- name: signature
+  type: signature
+  scheme: pgp-nacl
+  description: >-
+    Identity and key mutations (sig/post, sig/post_auth, key/add) are signed
+    with the account's private key (PGP or NaCl) over a chained,
+    Merkle-anchored signature, then posted. sig/next_seqno returns the next
+    sequence number for the signature chain.
+  source: https://keybase.io/docs/api/1.0/call/sig/post
+public_endpoints:
+- user/lookup
+- key/fetch
+- merkle/root
+- merkle/block

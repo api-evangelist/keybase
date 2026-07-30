@@ -1,0 +1,32 @@
+generated: '2026-07-20'
+method: searched
+source: https://keybase.io/docs/api/1.0
+format: keybase-status-envelope
+description: >-
+  Keybase API 1.0 does not use RFC 9457 problem+json. Every response carries a
+  top-level status object { code, name }. code 0 / "OK" is success; non-zero
+  codes signal errors. Codes below are those confirmed against the live API and
+  the public documentation; Keybase's full numeric status-code table is defined
+  in the keybase/client protocol (libkb status codes) and is not exhaustively
+  published on the API docs page.
+envelope_field: status
+problems:
+- code: 0
+  name: OK
+  meaning: Request succeeded.
+  evidence: 'live response of GET /_/api/1.0/user/lookup.json'
+- code: null
+  name: INPUT_ERROR
+  meaning: >-
+    Malformed or missing required input parameters (documented behavior — e.g.
+    lookup with no identifying parameter).
+  action: Correct the request parameters.
+- code: null
+  name: BAD_SESSION
+  meaning: Session token missing, invalid, or expired on an authenticated call.
+  action: Re-run the getsalt/login flow to obtain a fresh session token.
+notes: >-
+  Numeric values for non-OK codes are enumerated in the keybase/client source
+  (protocol/avdl + libkb); they are intentionally left null here rather than
+  fabricated. Not-found lookups are NOT errors — the API returns status OK with
+  null entries in the them[] array.

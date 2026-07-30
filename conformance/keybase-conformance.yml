@@ -1,0 +1,35 @@
+generated: '2026-07-20'
+method: derived
+source: https://keybase.io/docs/api/1.0
+description: >-
+  Cross-cutting standards conformance for the Keybase API 1.0, derived from the
+  public API documentation and observed behavior. Keybase is cryptography-first:
+  it conforms to PGP/OpenPGP and its own saltpack format, and uses a Merkle-tree
+  transparency log, but does not implement REST-web API standards like OAuth2 or
+  RFC 9457.
+standards:
+- id: openpgp
+  conforms: true
+  evidence: 'Serves ASCII-armored PGP public keys (<user>/pgp_keys.asc, key/fetch); PGP-signed identity proofs.'
+- id: saltpack
+  conforms: true
+  evidence: 'Keybase saltpack encrypted/signed message format (github.com/keybase/saltpack).'
+- id: merkle-tree-transparency
+  conforms: true
+  evidence: 'merkle/root and merkle/block endpoints expose a signed Merkle transparency log.'
+- id: cors
+  conforms: true
+  evidence: 'API documents cross-origin AJAX support from any website.'
+- id: oauth2
+  conforms: false
+  evidence: 'Uses custom salt/login session tokens + signature auth, not OAuth2.'
+- id: oidc
+  conforms: false
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: 'Errors use a status {code,name} envelope, not application/problem+json.'
+- id: json-api
+  conforms: false
+- id: openapi
+  conforms: false
+  evidence: 'No OpenAPI description is published for the v1.0 API.'

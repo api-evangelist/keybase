@@ -1,0 +1,33 @@
+generated: '2026-07-20'
+method: searched
+source: https://github.com/keybase
+description: >-
+  Officially supported Keybase client libraries. These are chat-bot SDKs that
+  script the local keybase CLI/service (not the public keybase.io HTTP API).
+  Verified against the public package registries (registry.npmjs.org,
+  pypi.org) and the keybase GitHub organization at fetch time.
+packages:
+- language: javascript
+  registry: npm
+  name: keybase-bot
+  url: https://www.npmjs.com/package/keybase-bot
+  source: https://github.com/keybase/keybase-bot
+  install: npm install keybase-bot
+  version: 3.6.1
+  license: BSD-3-Clause
+  official: true
+- language: python
+  registry: pypi
+  name: pykeybasebot
+  url: https://pypi.org/project/pykeybasebot/
+  source: https://github.com/keybase/pykeybasebot
+  install: pip install pykeybasebot
+  version: 0.2.1
+  official: true
+- language: go
+  registry: pkg.go.dev
+  name: github.com/keybase/go-keybase-chat-bot
+  url: https://pkg.go.dev/github.com/keybase/go-keybase-chat-bot
+  source: https://github.com/keybase/go-keybase-chat-bot
+  install: go get github.com/keybase/go-keybase-chat-bot
+  official: true

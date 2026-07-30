@@ -1,0 +1,8 @@
+generated: '2026-07-20'
+method: generated
+source: https://keybase.io/docs/api/1.0
+skills:
+- file: keybase-verify-identity.md
+  name: Verify a Keybase identity
+  api: keybase-api
+  operations: [user/lookup, key/fetch, merkle/root]
