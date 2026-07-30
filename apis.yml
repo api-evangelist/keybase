@@ -1,8 +1,30 @@
 aid: keybase
 name: Keybase
-description: Keybase is a company surfaced as a portfolio company of a16z and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Keybase is an end-to-end encrypted messaging, file-sharing, and key-directory
+  platform built on public-key cryptography, founded by Chris Coyne and Max
+  Krohn and acquired by Zoom in 2020. It maps human-readable usernames to public
+  keys and cryptographically verifiable social-identity proofs (Twitter, GitHub,
+  Reddit, Hacker News, personal domains, and cryptocurrency addresses), and
+  provides encrypted chat, teams, KBFS encrypted filesystem, git, and a wallet.
+  Keybase exposes a public read-oriented HTTP JSON API (version 1.0) at
+  keybase.io/_/api/1.0 for user lookup, PGP key fetch, Merkle-tree verification,
+  and session/signature auth, plus officially supported chat-bot SDKs for
+  Node.js, Python, and Go that script the local keybase client and CLI.
 url: https://raw.githubusercontent.com/api-evangelist/keybase/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://keybase.io/images/icons/icon-keybase-logo-48.png
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
@@ -11,12 +33,80 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
-apis: []
+- Security
+- Encryption
+- Cryptography
+- Identity
+- Messaging
+- Key Management
+- PGP
+- Developer Tools
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+apis:
+- name: Keybase API
+  description: >-
+    Keybase public HTTP JSON API (v1.0). Read-oriented endpoints for user
+    lookup and discovery by social proof, PGP public-key fetch, Merkle-tree root
+    and block retrieval for verification, and the salt/login/session and
+    signature-posting flow. All responses use a status envelope of
+    {code, name}; the API supports CORS.
+  humanURL: https://keybase.io/docs/api/1.0
+  baseURL: https://keybase.io/_/api/1.0
+  tags:
+  - Identity
+  - Cryptography
+  - Key Management
+  properties:
+  - type: Authentication
+    url: authentication/keybase-authentication.yml
+  - type: Conventions
+    url: conventions/keybase-conventions.yml
+  - type: ErrorCatalog
+    url: errors/keybase-problem-types.yml
+  - type: DataModel
+    url: data-model/keybase-data-model.yml
+  - type: MCPServer
+    url: mcp/keybase-mcp.yml
+  - type: AgentSkill
+    url: skills/_index.yml
+  - type: Conformance
+    url: conformance/keybase-conformance.yml
+  - type: Lifecycle
+    url: lifecycle/keybase-lifecycle.yml
+common:
+- type: DeveloperPortal
+  url: https://keybase.io/docs
+- type: Documentation
+  url: https://keybase.io/docs
+- type: APIReference
+  url: https://keybase.io/docs/api/1.0
+- type: Blog
+  url: https://keybase.io/blog
+- type: GitHubOrganization
+  url: https://github.com/keybase
+- type: Support
+  url: https://keybase.io/docs/bug_reporting
+- type: Security
+  url: https://keybase.io/docs/secadv
+- type: Packages
+  url: packages/keybase-packages.yml
+- type: SDKs
+  url: packages/keybase-packages.yml
+- type: CLI
+  url: cli/keybase-cli.yml
+- type: LLMsTxt
+  url: llms/keybase-llms.txt
+- type: DomainSecurity
+  url: security/keybase-domain-security.yml
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 13
+  pass: local-v1
