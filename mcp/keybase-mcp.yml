@@ -2,18 +2,17 @@ generated: '2026-07-20'
 method: derived
 status: candidate
 source: https://keybase.io/docs/api/1.0
-description: >-
-  Candidate MCP tool surface derived from the documented Keybase API 1.0
-  read endpoints. Keybase publishes no official hosted/remote MCP server;
-  this is a proposed mapping (one tool per public operation) so agents can
-  resolve Keybase identities and keys. status: candidate — not provider-published.
+description: 'Candidate MCP tool surface derived from the documented Keybase API 1.0 read endpoints. Keybase
+  publishes no official hosted/remote MCP server; this is a proposed mapping (one tool per public operation)
+  so agents can resolve Keybase identities and keys. status: candidate — not provider-published.'
 server:
   name: keybase
   transport: http
   url: null
 tools:
 - name: lookup_user
-  description: Look up a Keybase user by username or by a social proof (twitter/github/reddit/hackernews/domain) and return their profile, keys, and verified proofs.
+  description: Look up a Keybase user by username or by a social proof (twitter/github/reddit/hackernews/domain)
+    and return their profile, keys, and verified proofs.
   source_operation: keybase-api#user/lookup
 - name: fetch_pgp_key
   description: Fetch a user's ASCII-armored PGP public key.
@@ -24,3 +23,9 @@ tools:
 - name: get_merkle_block
   description: Retrieve a Merkle-tree block for verifying a user's sigchain.
   source_operation: keybase-api#merkle/block
+deployment:
+  mode: none
+  verified: derived
+  tools: 4
+  checked: '2026-08-12'
+  source: catalog MCP census
