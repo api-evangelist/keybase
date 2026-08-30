@@ -92,6 +92,11 @@ apis:
   - type: Lifecycle
     url: lifecycle/keybase-lifecycle.yml
 common:
+- type: ParentCompany
+  url: https://apis.io/providers/zoom/
+  name: Zoom
+  x-relationship: acquired
+  x-evidence: "Keybase is an end-to-end encrypted messaging, file-sharing, and key-directory platform built on public-key cryptography, founded by Chris Coyne and Max Krohn and acquired by Zoom in 2020."
 - type: DeveloperPortal
   url: https://keybase.io/docs
 - type: Documentation
