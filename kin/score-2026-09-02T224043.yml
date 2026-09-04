@@ -1,44 +1,45 @@
-# Kin Score artifact — keybase — 2026-08-03T161012
+# Kin Score artifact — keybase — 2026-09-02T224043
 # The API Evangelist rating (https://github.com/api-evangelist/kin-score). Generated; do not edit.
 ---
 kin_score:
   slug: keybase
-  schema_version: 0.9
-  scored_at: '2026-08-03'
-  run_ts: 2026-08-03T161012
-  composite: 18.1
+  schema_version: 0.18.0
+  scored_at: '2026-09-02'
+  run_ts: 2026-09-02T224043
+  composite: 22.1
   band: emerging
   facets:
-    discoverability: 87.0
+    discoverability: 75.9
     contract_quality: 0.0
-    governance: 3.1
-    operational_transparency: 15.8
-    developer_ergonomics: 43.5
+    governance: 4.5
+    operational_transparency: 13.2
+    developer_ergonomics: 61.3
     commercial_clarity: 0.0
+    contract_governance: 4.5
+    access_clarity: 0.0
   agent_readiness:
-    score: 0.0
-    band: human-only
+    score: 6.3
+    band: agent-aware
     dimensions:
       spec_presence: false
       agentic_access: false
+      reversibility_documented: false
       mcp_server: false
-      auth_clarity: false
+      auth_clarity: bearer
       idempotency: false
-      error_semantics: false
+      error_semantics: documented
       openapi_examples: false
       rate_limit_signal: false
       event_surface_described: false
-      agent_skills: false
+      agent_skills: derived
       well_known_catalog: false
       consent_identity: false
       agent_card: false
       dry_run_mode: false
-  regulatory:
-    applies: true
-    regime: Telecommunications
-    regime_id: telecommunications
-    score: 8.3
-    matched_via: tags
+      delegated_identity: false
+      protected_resource_metadata: false
+      dynamic_client_registration: false
+      agentic_commerce: false
   provenance:
     mcp: derived
     skills: derived
