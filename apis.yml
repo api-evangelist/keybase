@@ -94,6 +94,8 @@ apis:
   - type: Lifecycle
     url: lifecycle/keybase-lifecycle.yml
 common:
+- type: Website
+  url: https://www.keybase.io/
 - type: ParentCompany
   url: https://apis.io/providers/zoom/
   name: Zoom
