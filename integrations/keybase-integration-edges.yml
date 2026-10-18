@@ -1,0 +1,24 @@
+edges:
+- partner_name: Zoom (own)
+  partner: zoom
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://marketplace.zoom.us/apps/ujK2hHdLR5mamrMshOTFwA
+  mirror_of: zoom/integrations/zoom-integration-edges.yml
+  apps:
+  - Keybase Meeting Link Bot
+  listing_count: 1
+  detected: '2026-10-18'
+  detected_by: mirror-platform-listings.py
+  category: Zoom app
+generated: '2026-10-18'
+method: searched
+source:
+- zoom/integrations/zoom-integration-edges.yml
+checked:
+- zoom/integrations/zoom-integration-edges.yml
