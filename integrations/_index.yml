@@ -16,3 +16,33 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
+- slug: keybase-go-module-proxy
+  label: Go module proxy
+  partner_name: Go module proxy
+  category: official SDK (Go)
+  type: register
+  channel: package-registry
+  evidence: https://pkg.go.dev/github.com/keybase/go-keybase-chat-bot
+  source: edge
+  relationship: distribution-channel
+  contract_reference:
+    register: Go module proxy (public registry JSON)
+    spec_file: null
+    language: Go
+    packages:
+    - name: github.com/keybase/go-keybase-chat-bot
+      version: v0.0.0-20261015140940-df33a1413e79
+      released: '2026-10-15'
+      released_field: Time
+      lapsed: false
+      page: https://pkg.go.dev/github.com/keybase/go-keybase-chat-bot
+      repo_leg: github-org:keybase
+      publisher_leg: org:keybase
+      matched_by: github-org
+    current: true
+    signal_note: 'an official package on the registry: distribution, not an integration; lapsed = no release in
+      24 months'
+    detected_by: sweep-official-sdks.py
+    detected: '2026-10-18'
+  status: not-a-workflow
+  arazzo: null
