@@ -97,3 +97,37 @@
     sector: Enterprise
   status: not-a-workflow
   arazzo: null
+- slug: keybase-arch-user-repository-aur
+  label: Arch User Repository (AUR)
+  partner_name: Arch User Repository (AUR)
+  category: official CLI (Arch User Repository (AUR))
+  type: register
+  channel: package-registry
+  evidence: https://aur.archlinux.org/packages/keybase
+  source: edge
+  relationship: distribution-channel
+  contract_reference:
+    register: Arch User Repository (AUR) (public package index)
+    spec_file: null
+    packages:
+    - name: keybase
+      kind: aur
+      version: 6.6.3-1
+      released: '2026-06-27'
+      released_field: AUR LastModified
+      out_of_date: false
+      lapsed: false
+      page: https://aur.archlinux.org/packages/keybase
+      upstream: https://keybase.io
+      cli: 'AUR description: CLI tool for GPG with keybase.io'
+      repo_leg: domain:keybase.io
+      publisher_leg: artifact-github-org:keybase
+      matched_by: domain
+    current: true
+    signal_note: 'the provider''s own command-line tool packaged for Arch Linux (community-maintained PKGBUILD whose
+      upstream and source artifact are the provider''s): distribution, not an integration; lapsed = flagged out-of-date
+      or not updated in 24 months'
+    detected_by: sweep-aur-vendor-cli-packages.py
+    detected: '2026-10-23'
+  status: not-a-workflow
+  arazzo: null
